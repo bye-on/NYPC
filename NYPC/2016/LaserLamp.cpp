@@ -2,13 +2,13 @@
 #include <vector>
 using namespace std;
 char map[30][30] = { 0, };
-int dw[4] = { 0,1,0,-1 }; // »ó, ÇÏ, ¿ì, ÁÂ
-int dh[4] = { -1,0,1,0 }; // -> ½Ã°è(+1) <- ¹Ý½Ã°è(+3)
+int dw[4] = { 0,1,0,-1 }; // ìƒ, í•˜, ìš°, ì¢Œ
+int dh[4] = { -1,0,1,0 }; // -> ì‹œê³„(+1) <- ë°˜ì‹œê³„(+3)
 
 int main() {
-	int w, h; // °¡·Î(¿­), ¼¼·Î(Çà)
+	int w, h; // ê°€ë¡œ(ì—´), ì„¸ë¡œ(í–‰)
 	cin >> w >> h;
-	int x = 0, y = 0; // Àüµî À§Ä¡
+	int x = 0, y = 0; // ì „ë“± ìœ„ì¹˜
 	vector<char> direction;
 	vector<int> location;
 	for (int i = 0; i < h; i++) {
@@ -17,8 +17,8 @@ int main() {
 		for (int j = 0; j < w; j++) {
 			map[i][j] = str[j];
 			if (map[i][j] == 'O') {
-				x = i; // ¼¼·Î
-				y = j; // °¡·Î
+				x = i; // ì„¸ë¡œ
+				y = j; // ê°€ë¡œ
 			}
 		}
 	}
@@ -52,14 +52,14 @@ int main() {
 			}
 			else {
 				if (map[nx][ny] == '\\') {
-					if ((index % 2) == 0) index = (index + 3) % 4; // »ó ÇÏ -> ¹Ý½Ã°è
-					else index = (index + 1) % 4; // ¿ì ÁÂ -> ½Ã°è
+					if ((index % 2) == 0) index = (index + 3) % 4; // ìƒ í•˜ -> ë°˜ì‹œê³„
+					else index = (index + 1) % 4; // ìš° ì¢Œ -> ì‹œê³„
 				}
 				else if (map[nx][ny] == '/') {
-					if ((index % 2) == 0) index = (index + 1) % 4; // »ó ÇÏ -> ½Ã°è
-					else index = (index + 3) % 4; // ¿ì ÁÂ -> ¹Ý½Ã°è
+					if ((index % 2) == 0) index = (index + 1) % 4; // ìƒ í•˜ -> ì‹œê³„
+					else index = (index + 3) % 4; // ìš° ì¢Œ -> ë°˜ì‹œê³„
 				} 
-				// '.'°¡ ÇÊ¿ä ¾øÀ½(¹æÇâ ¹Ù²ÙÁö ¾ÊÀ¸´Ï±î)
+				// '.'ê°€ í•„ìš” ì—†ìŒ(ë°©í–¥ ë°”ê¾¸ì§€ ì•Šìœ¼ë‹ˆê¹Œ)
 			}
 		}
 	}
