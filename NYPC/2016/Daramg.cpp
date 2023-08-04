@@ -1,3 +1,5 @@
+// https://www.nypc.co.kr/community/questionView.do?IDX=1&category=1
+// 넥슨은 다람쥐를 뿌려라
 #include <iostream>
 using namespace std;
 char map[21][21];
