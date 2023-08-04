@@ -5,8 +5,8 @@ char map[21][21];
 int main() {
 	int N;
 	cin >> N;
-	int Dcount = 0; // ´Ù¶÷ÁãÀÇ ¼ö
-	int Ccount = 0; // ÇÃ·¹ÀÌ¾îÀÇ ¼ö
+	int Dcount = 0; // ë‹¤ëŒì¥ì˜ ìˆ˜
+	int Ccount = 0; // í”Œë ˆì´ì–´ì˜ ìˆ˜
 
 	for (int i = 0; i < N; i++) {
 		string str;
