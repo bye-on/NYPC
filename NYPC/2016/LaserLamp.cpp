@@ -1,3 +1,5 @@
+// https://www.nypc.co.kr/community/questionView.do?IDX=3&category=1
+// 전등 켜기
 #include <iostream>
 #include <vector>
 using namespace std;
