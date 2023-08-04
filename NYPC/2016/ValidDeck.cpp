@@ -1,3 +1,5 @@
+// https://www.nypc.co.kr/community/questionView.do?IDX=2&category=1
+// 마비노기 듀얼: 올바른 덱인가요?
 #include <iostream>
 #include <vector>
 #include <algorithm>
